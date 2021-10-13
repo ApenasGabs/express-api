@@ -1,8 +1,5 @@
-const express = require("express");
-const app = express();
-app.get("/", (req, res) => {
-    console.log("servidor rodando");
-    res.send("voce entrou em home");
-});
+const customExpress = require("./config/customExpress");
 
-app.listen(3000);
+const app = customExpress();
+
+app.listen(3000, () => console.log("servidor rodando 👁️ 👄 👁️"));
